@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Armon.Lib.Type
+namespace Armon.Lib.Text
 {
     public static class ByteExtension
     {

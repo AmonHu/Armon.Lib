@@ -1,18 +1,18 @@
 ﻿using System.Text;
+using System.Text.RegularExpressions;
 
-namespace Armon.Lib.Type
+namespace Armon.Lib.Text
 {
     public class StringExtension
     {
-        public static List<string> Split(string s, params char[]? separator) 
+        public static List<string> Split(string s, params char[]? separator)
         {
-            if (string.IsNullOrWhiteSpace(s)) 
+            if (s == null)
             {
-                return new();
+                throw new ArgumentNullException("s");
             }
             return s.Split(separator).ToList();
         }
-
 
         public static int GetLength(string s)
         {
@@ -43,12 +43,17 @@ namespace Armon.Lib.Type
 
         public static string From(List<string> s, char? separator)
         {
-            if (separator == null) 
+            if (separator == null)
             {
                 return string.Join("", s);
             }
-            
+
             return string.Join((char)separator, s);
+        }
+
+        public static int Count(string s, string t)
+        {
+            return Regex.Matches(s ?? "", t).Count;
         }
     }
 }

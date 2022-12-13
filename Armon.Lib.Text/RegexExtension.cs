@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace Armon.Lib.Type
+namespace Armon.Lib.Text
 {
     public static class RegexExtension
     {
@@ -25,13 +25,11 @@ namespace Armon.Lib.Type
             return IsMatch(s, pattern);
         }
 
-
         public static bool IsNumeric(string s)
         {
             var pattern = @"^\-?[0-9]+$";
             return IsMatch(s, pattern);
         }
-
 
         public static bool IsUnicode(string s)
         {
