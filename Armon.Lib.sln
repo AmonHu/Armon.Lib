@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Armon.Lib", "Armon.Lib\Armon.Lib.csproj", "{FD3EE535-3C76-41D5-9445-FF1B435FEA8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Armon.Lib", "Armon.Lib\Armon.Lib.csproj", "{FD3EE535-3C76-41D5-9445-FF1B435FEA8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Armon.Lib.File", "Armon.Lib.File\Armon.Lib.File.csproj", "{C699B900-F162-4C92-9D99-159D09BA38F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Armon.Lib.Type", "Armon.Lib.Type\Armon.Lib.Type.csproj", "{70087F1D-9FB6-43EA-8BB3-152E935F2412}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Armon.Lib.Type", "Armon.Lib.Type\Armon.Lib.Type.csproj", "{70087F1D-9FB6-43EA-8BB3-152E935F2412}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Armon.Lib.Currency", "Armon.Lib.Currency\Armon.Lib.Currency.csproj", "{6B3D52CB-97E5-47E8-83A2-9E1ACA2AB339}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Armon.Lib.Currency", "Armon.Lib.Currency\Armon.Lib.Currency.csproj", "{6B3D52CB-97E5-47E8-83A2-9E1ACA2AB339}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Armon.Lib.Algorithm", "Armon.Lib.Algorithm\Armon.Lib.Algorithm.csproj", "{96AA7B7A-6DAE-45CA-9F1F-E93C8E3F8B10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Armon.Lib.Algorithm", "Armon.Lib.Algorithm\Armon.Lib.Algorithm.csproj", "{96AA7B7A-6DAE-45CA-9F1F-E93C8E3F8B10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Armon.Lib.Text", "Armon.Lib.Text\Armon.Lib.Text.csproj", "{CBE2859C-37A9-4B9D-B936-B326E034B9CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Armon.Lib.Text", "Armon.Lib.Text\Armon.Lib.Text.csproj", "{CBE2859C-37A9-4B9D-B936-B326E034B9CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Armon.Lib.Text.Test", "Armon.Lib.Text.Test\Armon.Lib.Text.Test.csproj", "{D090B180-A993-4DC8-B075-2D3AE51A0229}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Armon.Lib.Text.Test", "Armon.Lib.Text.Test\Armon.Lib.Text.Test.csproj", "{D090B180-A993-4DC8-B075-2D3AE51A0229}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Armon.Lib.Document", "Armon.Lib.Document\Armon.Lib.Document.csproj", "{F558E4CC-A222-4AE3-8E62-539F5FB49D00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +27,6 @@ Global
 		{FD3EE535-3C76-41D5-9445-FF1B435FEA8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD3EE535-3C76-41D5-9445-FF1B435FEA8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD3EE535-3C76-41D5-9445-FF1B435FEA8A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C699B900-F162-4C92-9D99-159D09BA38F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C699B900-F162-4C92-9D99-159D09BA38F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C699B900-F162-4C92-9D99-159D09BA38F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C699B900-F162-4C92-9D99-159D09BA38F6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{70087F1D-9FB6-43EA-8BB3-152E935F2412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{70087F1D-9FB6-43EA-8BB3-152E935F2412}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70087F1D-9FB6-43EA-8BB3-152E935F2412}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +47,10 @@ Global
 		{D090B180-A993-4DC8-B075-2D3AE51A0229}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D090B180-A993-4DC8-B075-2D3AE51A0229}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D090B180-A993-4DC8-B075-2D3AE51A0229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F558E4CC-A222-4AE3-8E62-539F5FB49D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F558E4CC-A222-4AE3-8E62-539F5FB49D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F558E4CC-A222-4AE3-8E62-539F5FB49D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F558E4CC-A222-4AE3-8E62-539F5FB49D00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

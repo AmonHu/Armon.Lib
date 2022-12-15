@@ -6,17 +6,17 @@ namespace Armon.Lib.Text
     {
         public static string Encode(byte[] b)
         {
-            b = b ?? Array.Empty<byte>();
+            b ??= Array.Empty<byte>();
             return Convert.ToBase64String(b);
         }
 
         public static string Encode(string s, Encoding? encoding = null)
         {
-            if (s == null) 
+            if (s == null)
             {
-                throw new ArgumentNullException("s");
+                throw new ArgumentNullException(nameof(s));
             }
-            encoding = encoding ?? Encoding.UTF8;
+            encoding ??= Encoding.UTF8;
             var b = encoding.GetBytes(s);
             return Encode(b);
         }
@@ -25,7 +25,7 @@ namespace Armon.Lib.Text
         {
             if (s == null)
             {
-                throw new ArgumentNullException("s");
+                throw new ArgumentNullException(nameof(s));
             }
             encoding = encoding ?? Encoding.UTF8;
             var b = Convert.FromBase64String(s);

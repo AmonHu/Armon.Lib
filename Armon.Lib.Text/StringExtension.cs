@@ -9,39 +9,33 @@ namespace Armon.Lib.Text
         {
             if (s == null)
             {
-                throw new ArgumentNullException("s");
+                throw new ArgumentNullException(nameof(s));
             }
             return s.Split(separator).ToList();
         }
 
-        public static int GetLength(string s)
+        public static int GetLengthByEncoding(string s, Encoding? encoding = null)
         {
-            var bytes = new ASCIIEncoding().GetBytes(s);
-            int length = 0;
-            foreach (byte b in bytes)
+            if (s == null)
             {
-                if (b == 63)
-                {
-                    length += 2;
-                }
-                else
-                {
-                    length += 1;
-                }
+                throw new ArgumentNullException(nameof(s));
             }
-            return length;
+
+            encoding ??= Encoding.UTF8;
+            return encoding.GetByteCount(s);
         }
 
-        public static string From(byte[] b, Encoding? encoding)
+        public static string From(byte[] b, Encoding? encoding = null)
         {
-            if (encoding == null)
+            if (b == null)
             {
-                encoding = Encoding.UTF8;
+                throw new ArgumentNullException(nameof(b));
             }
+            encoding ??= Encoding.UTF8;
             return encoding.GetString(b);
         }
 
-        public static string From(List<string> s, char? separator)
+        public static string From(List<string> s, char? separator = null)
         {
             if (separator == null)
             {
@@ -53,7 +47,11 @@ namespace Armon.Lib.Text
 
         public static int Count(string s, string t)
         {
-            return Regex.Matches(s ?? "", t).Count;
+            if (s == null)
+            {
+                throw new ArgumentNullException(nameof(s));
+            }
+            return Regex.Matches(s, t).Count;
         }
     }
 }
