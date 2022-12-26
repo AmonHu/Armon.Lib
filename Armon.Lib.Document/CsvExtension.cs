@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Armon.Lib.Document
 {
-    internal class CsvExtension
+    public class CsvExtension
     {
     }
 }
