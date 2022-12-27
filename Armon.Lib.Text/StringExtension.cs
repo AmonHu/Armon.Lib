@@ -53,5 +53,49 @@ namespace Armon.Lib.Text
             }
             return Regex.Matches(s, t).Count;
         }
+
+        public static string ToSBC(string s)
+        {
+            if (s == null)
+            {
+                throw new ArgumentNullException(nameof(s));
+            }
+
+            char[] c = s.ToCharArray();
+            for (int i = 0; i < c.Length; i++)
+            {
+                if (c[i] == 32)
+                {
+                    c[i] = (char)12288;
+                    continue;
+                }
+                if (c[i] < 127) 
+                {
+                    c[i] = (char)(c[i] + 65248);
+                }
+            }
+            return new string(c);
+        }
+
+        public static string ToDBC(string s)
+        {
+            if (s == null)
+            {
+                throw new ArgumentNullException(nameof(s));
+            }
+
+            char[] c = s.ToCharArray();
+            for (int i = 0; i < c.Length; i++)
+            {
+                if (c[i] == 12288)
+                {
+                    c[i] = (char)32;
+                    continue;
+                }
+                if (c[i] > 65280 && c[i] < 65375)
+                    c[i] = (char)(c[i] - 65248);
+            }
+            return new string(c);
+        }
     }
 }
