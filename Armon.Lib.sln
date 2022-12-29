@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Armon.Lib.Type", "Armon.Lib
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Armon.Lib.Image", "Armon.Lib.Image\Armon.Lib.Image.csproj", "{75546565-D824-4E8E-8EC4-C8D29E0ABD6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Armon.Lib.Image.Test", "Armon.Lib.Image.Test\Armon.Lib.Image.Test.csproj", "{291CB708-3D34-44ED-88BB-6FD49209C940}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Armon.Lib.Image.Test", "Armon.Lib.Image.Test\Armon.Lib.Image.Test.csproj", "{291CB708-3D34-44ED-88BB-6FD49209C940}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Armon.Lib.Document.Test", "Armon.Lib.Document.Test\Armon.Lib.Document.Test.csproj", "{D8BF4AC8-B081-47EC-ADC4-B08DA6B21C30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{291CB708-3D34-44ED-88BB-6FD49209C940}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{291CB708-3D34-44ED-88BB-6FD49209C940}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{291CB708-3D34-44ED-88BB-6FD49209C940}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8BF4AC8-B081-47EC-ADC4-B08DA6B21C30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8BF4AC8-B081-47EC-ADC4-B08DA6B21C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8BF4AC8-B081-47EC-ADC4-B08DA6B21C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8BF4AC8-B081-47EC-ADC4-B08DA6B21C30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
