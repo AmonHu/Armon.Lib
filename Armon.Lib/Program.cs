@@ -1,4 +1,5 @@
 ﻿using Armon.Lib;
+using Armon.Lib.Document;
 using System.Xml.Linq;
 
 
@@ -75,6 +76,17 @@ var studentsToXML = new XElement("Root",
 
 // Execute the query.
 Console.WriteLine(studentsToXML);
+
+string path = @"\\172.16.2.25\Shared";
+User user = new User
+{
+    Id = "Diauto",
+    Password = "diauto"
+};
+
+var sharedDir = new SharedDirectory(path, user);
+var files = sharedDir.EnumerateFiles("*.txt");
+Console.WriteLine(string.Join(",", files)) ;
 
 // Keep the console open in debug mode.
 Console.WriteLine("Press any key to exit.");

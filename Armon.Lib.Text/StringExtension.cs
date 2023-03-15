@@ -97,5 +97,23 @@ namespace Armon.Lib.Text
             }
             return new string(c);
         }
+
+        public static int ToInt(string s) 
+        {
+            if (!int.TryParse(s, out int result)) 
+            {
+                return 0;
+            }
+            return result;
+        }
+
+        public static double ToDouble(string s)
+        {
+            if (!double.TryParse(s, out double result))
+            {
+                return 0;
+            }
+            return result;
+        }
     }
 }
