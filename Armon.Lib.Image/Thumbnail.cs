@@ -4,17 +4,39 @@ using System.Runtime.Versioning;
 using SystemImage = System.Drawing.Image;
 namespace Armon.Lib.Image
 {
+    public enum ThumbnailMode
+    {
+        Cut,
+        Hw,
+        H,
+        W,
+    }
+
+    public class ThumbnailOptions
+    {
+        /// <summary>
+        /// 缩略图宽度
+        /// </summary>
+        public int Width { get; set; }
+        /// <summary>
+        /// 缩略图高度
+        /// </summary>
+        public int Height { get; set; }
+        /// <summary>
+        /// 生成缩略图的方式
+        /// </summary>
+        public ThumbnailMode Mode { get; set; }
+    }
+
+
     [SupportedOSPlatform("windows")]
     internal class Thumbnail
     {
         /// <summary>
         /// 生成缩略图
         /// </summary>
-        /// <param name="originalImagePath">源图路径（物理路径）</param>
-        /// <param name="thumbnailPath">缩略图路径（物理路径）</param>
-        /// <param name="width">缩略图宽度</param>
-        /// <param name="height">缩略图高度</param>
-        /// <param name="mode">生成缩略图的方式</param>    
+        /// <param name="options">参数</param>
+        /// <return> image</return>
         public static SystemImage Generate(SystemImage original, ThumbnailOptions options)
         {
             var towidth = options.Width;

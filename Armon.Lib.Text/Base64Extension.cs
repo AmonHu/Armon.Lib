@@ -16,6 +16,7 @@ namespace Armon.Lib.Text
             {
                 throw new ArgumentNullException(nameof(s));
             }
+
             encoding ??= Encoding.UTF8;
             var b = encoding.GetBytes(s);
             return Encode(b);
@@ -27,7 +28,7 @@ namespace Armon.Lib.Text
             {
                 throw new ArgumentNullException(nameof(s));
             }
-            encoding = encoding ?? Encoding.UTF8;
+            encoding ??= Encoding.UTF8;
             var b = Convert.FromBase64String(s);
             return encoding.GetString(b);
         }

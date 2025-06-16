@@ -5,9 +5,9 @@ using System.Xml.Linq;
 
 // Create the first data source.
 
-List<Student> students = new List<Student>()
+var students = new List<Student>()
 {
-    new Student
+    new()
     {
         First="Svetlana",
         Last="Omelchenko",
@@ -17,7 +17,7 @@ List<Student> students = new List<Student>()
         Scores= new List<int> { 97, 92, 81, 60 }
     },
     new Student
-    { 
+    {
         First="Claire",
         Last="O’Donnell",
         ID=112,
@@ -26,7 +26,7 @@ List<Student> students = new List<Student>()
         Scores= new List<int> { 75, 84, 91, 39 }
     },
     new Student
-    { 
+    {
         First="Sven",
         Last="Mortensen",
         ID=113,
@@ -35,6 +35,14 @@ List<Student> students = new List<Student>()
         Scores= new List<int> { 88, 94, 65, 91 }
     },
 };
+
+var s = students.Where(s => s.ID == 113).Where(s => s.City == "Lake").ToList();
+foreach (var item in s)
+{
+
+}
+
+
 
 // Create the second data source.
 List<Teacher> teachers = new List<Teacher>()
@@ -86,7 +94,7 @@ User user = new User
 
 var sharedDir = new SharedDirectory(path, user);
 var files = sharedDir.EnumerateFiles("*.txt");
-Console.WriteLine(string.Join(",", files)) ;
+Console.WriteLine(string.Join(",", files));
 
 // Keep the console open in debug mode.
 Console.WriteLine("Press any key to exit.");
